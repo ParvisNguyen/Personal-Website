@@ -1,0 +1,43 @@
+/*Roboto Condensed
+Ubuntu*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/*Colour reference*/
+:root {
+    --base-colour:#ffffff;
+    --text-colour: #333;
+    --primary-colour: #ffc06e;
+    --secondary-colour: #8D8DFF;
+}
+
+/*Removing default spacing to prevent unexpected behaviour*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Defining Text Styles*/
+html{
+    font-family: Ubuntu, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color)
+}
+
+/*Defining Body Styles*/
+body {
+    padding: 1em;
+    background-color: var(--base-colour);
+}
+
+/*Defining font for headers*/
+h1, h2, h3{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Navigation bar styles*/
+nav {
+    margin: 1em auto 3em auto;
+    width: min (1000px, 100%);
+
+}
