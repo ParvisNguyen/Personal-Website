@@ -9,6 +9,9 @@ Ubuntu*/
     --text-colour: #333;
     --primary-colour: #ffc06e;
     --secondary-colour: #8D8DFF;
+    --colour-1: #ff6e6e;
+    --colour-2: #6eff6e;
+    --colour-3: #6e6eff;
 }
 
 /*Removing default spacing to prevent unexpected behaviour*/
@@ -42,7 +45,7 @@ nav {
     width: min (1000px, 100%);
 }
 
-/*Navigation Bar*/
+/*Navigation Unordered list*/
 nav ul {
     /*Display as flex container into horizontal row*/
     display: flex;
@@ -57,4 +60,72 @@ nav ul {
 nav li:first-child {
     /*Adds left margin to first item*/
     margin-right: auto;
+    font-family: Roboto Condensed, sans-serif;
+    font-weight: bold;
+}
+
+nav a {
+    /*Anchor tag styles*/
+    text-decoration: none;
+    color: var(--text-colour);
+}
+
+nav a:hover{
+    /*Hover effect by underlining for links*/
+    text-decoration: underline;
+}
+
+header, section{
+    /*Vertical spacing, center horizontally*/
+    margin: 2em auto;
+    /*Grow upto 75em wide and not overflow screen*/
+    width: min(75em,100%);
+    background-color: var(--colour-1);
+    padding: min(2em, 15%);
+    /*Adds rounded corners*/
+    border-radius: 1em;
+}
+
+.flex-container{
+    /*Arrange chart elements side by side*/
+    display: flex;
+    /*Align center horizontally*/ 
+    justify-content: center;
+    /*Align center vertically*/
+    align-items: center;
+    /*Allow items to stack on smaller screens*/
+    flex-wrap: wrap;
+    /*Adds space between items*/
+    gap: 3em;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    /* flex: grow behaviour, flex shrink, flex basis */
+    flex: 0 1 34em;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+.text-container p{
+    margin: .75em 0 1em 0;
+    font-size: 1.25rem;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-colour);
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight:600;
 }
