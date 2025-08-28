@@ -37,7 +37,24 @@ h1, h2, h3{
 
 /*Navigation bar styles*/
 nav {
+    /*Margin: Top Right Bottom Left*/
     margin: 1em auto 3em auto;
     width: min (1000px, 100%);
+}
 
+/*Navigation Bar*/
+nav ul {
+    /*Display as flex container into horizontal row*/
+    display: flex;
+    /*Centers vertically*/
+    align-items: center;
+    /*Removes bullet points*/
+    list-style-type: none;
+    /*Adds space between items*/
+    gap: 2em;
+}
+
+nav li:first-child {
+    /*Adds left margin to first item*/
+    margin-right: auto;
 }
