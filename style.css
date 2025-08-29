@@ -1,6 +1,6 @@
-/*Roboto Condensed
+/*Roboto
 Ubuntu*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /*Colour reference*/
@@ -35,7 +35,7 @@ body {
 
 /*Defining font for headers*/
 h1, h2, h3{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*Navigation bar styles*/
@@ -128,4 +128,22 @@ h1{
     padding: .75em 1.25em;
     border-radius: .5em;
     font-weight:600;
+}
+
+.secondary {
+    background-color: var(--secondary-colour);
+}
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--colour-2);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25rem;
 }
