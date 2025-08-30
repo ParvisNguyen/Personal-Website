@@ -147,3 +147,10 @@ section p {
     margin-top: 1em;
     font-size: 1.25rem;
 }
+
+.text-container ul {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1em;
+    list-style-type: disc;
+    font-size: 1.25rem;
+}
