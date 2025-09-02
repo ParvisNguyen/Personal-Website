@@ -5,13 +5,16 @@ Ubuntu*/
 
 /*Colour reference*/
 :root {
-    --base-colour:#ffffff;
-    --text-colour: #333;
-    --primary-colour: #ffc06e;
-    --secondary-colour: #8D8DFF;
-    --colour-1: #ff6e6e;
-    --colour-2: #6eff6e;
+    --base-colour:#ED254E;
+    --text-colour-bright: #fff;
+    --text-colour-dark: #333;
+    --github-colour: #000000;
+    --linkedin-colour: #8D8DFF;
+    --intro-colour: #011936;
+    --colour-2: #465362;
     --colour-3: #6e6eff;
+    --shadow-colour: rgba(0, 0, 0, 0.08);
+    --card-colour: #F9DC5C
 }
 
 /*Removing default spacing to prevent unexpected behaviour*/
@@ -24,13 +27,19 @@ Ubuntu*/
 /*Defining Text Styles*/
 html{
     font-family: Ubuntu, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-color)
+    color: var(--text-colour-bright);
+    scroll-behavior: smooth; /* Enables smooth scroll for anchor links */
 }
 
 /*Defining Body Styles*/
 body {
     padding: 1em;
     background-color: var(--base-colour);
+    background-image: url('Images/Wallpaper.svg'); 
+    background-size: cover;      /* Make the image cover the whole background */
+    background-repeat: no-repeat;/* Prevent tiling */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /*Image moves with the page*/
 }
 
 /*Defining font for headers*/
@@ -40,21 +49,17 @@ h1, h2, h3{
 
 /*Navigation bar styles*/
 nav {
-    /*Margin: Top Right Bottom Left*/
-    margin: 1em auto 3em auto;
+    margin: 1em auto 3em auto; /*Margin: Top Right Bottom Left*/
     width: min (1000px, 100%);
+    
 }
 
 /*Navigation Unordered list*/
 nav ul {
-    /*Display as flex container into horizontal row*/
-    display: flex;
-    /*Centers vertically*/
-    align-items: center;
-    /*Removes bullet points*/
-    list-style-type: none;
-    /*Adds space between items*/
-    gap: 2em;
+    display: flex; /*Display as flex container into horizontal row*/
+    align-items: center; /*Centers vertically*/
+    list-style-type: none; /*Removes bullet points*/
+    gap: 2em; /*Adds space between items*/
 }
 
 nav li:first-child {
@@ -75,28 +80,32 @@ nav a:hover{
     text-decoration: underline;
 }
 
+
 header, section{
     /*Vertical spacing, center horizontally*/
-    margin: 2em auto;
-    /*Grow upto 75em wide and not overflow screen*/
-    width: min(75em,100%);
-    background-color: var(--colour-1);
+    margin: 2em auto;    
+    width: min(75em,100%); /*Grow upto 75em wide and not overflow screen*/
+    background-color: var(--intro-colour);
     padding: min(2em, 15%);
-    /*Adds rounded corners*/
-    border-radius: 1em;
+    border-radius: 1em; /*Adds rounded corners*/
 }
 
 .flex-container{
     /*Arrange chart elements side by side*/
-    display: flex;
-    /*Align center horizontally*/ 
-    justify-content: center;
-    /*Align center vertically*/
-    align-items: center;
-    /*Allow items to stack on smaller screens*/
-    flex-wrap: wrap;
-    /*Adds space between items*/
-    gap: 3em;
+    display: flex; 
+    justify-content: center; /*Align center horizontally*/
+    align-items: center; /*Align center vertically*/
+    flex-wrap: wrap; /*Allow items to stack on smaller screens*/
+    gap: 3em; /*Adds space between items*/
+
+    opacity:0; /*Adds a fade in animation*/
+    animation: fadeIn 2s ease-in forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+
 }
 
 header img {
@@ -124,14 +133,15 @@ h1{
     display: inline-block;
     text-decoration: none;
     color: white;
-    background-color: var(--primary-colour);
+    background-color: var(--github-colour);
     padding: .75em 1.25em;
     border-radius: .5em;
     font-weight:600;
 }
 
 .secondary {
-    background-color: var(--secondary-colour);
+    color: white;
+    background-color: var(--linkedin-colour);
 }
 
 section {
@@ -149,8 +159,44 @@ section p {
 }
 
 .text-container ul {
-    font-family: 'Roboto', sans-serif;
-    padding-left: 1em;
-    list-style-type: disc;
-    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;  /* List font */
+    padding-left: 1em; /* List left padding */
+    list-style-type: disc; /* Bullet style */
+    font-size: 1.25rem;                 /* List font size */
+}
+
+.skills-grid {
+    display: flex;                      /* Skills grid layout */
+    gap: 2em;                           /* Space between categories */
+    justify-content: center;            /* Center grid */
+    margin-top: 2em;                    /* Top margin */
+}
+
+.skill-category {
+    background: var(--card-colour); /* Card background */
+    border-radius: 1em;                 /* Rounded card */
+    padding: 1.5em;                     /* Card padding */
+    box-shadow: 0 2px 8px var(--shadow-colour); /* Card shadow */
+    flex: 1 1 200px;                    /* Card flex sizing */
+    min-width: 200px;                   /* Minimum card width */
+    text-align: center;                 /* Center text */
+}
+
+.skill-category h3 {
+    margin-bottom: 1em;                 /* Space below heading */
+    font-size: 1.3em;                   /* Heading size */
+    display: flex;                      /* Icon and text inline */
+    align-items: center;                /* Center vertically */
+    justify-content: center;            /* Center horizontally */
+    gap: 0.5em;                         /* Space between icon and text */
+}
+
+.skill-category ul {
+    list-style: none;                   /* Remove bullets */
+    padding: 0;                         /* Remove padding */
+}
+
+.skill-category li {
+    margin: 0.5em 0;                    /* Space between skills */
+    font-size: 1.1em;                   /* Skill font size */
 }
