@@ -152,6 +152,11 @@ section {
 
 h2 {
     font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+h3 {
+    font-size: 1.5rem;
 }
 
 section p {
@@ -215,4 +220,16 @@ section p {
     border-radius: 0.5em;
     background-color: var(--project-card);
     color:black
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.project-icons i {
+    font-size: 1.5em;
+    margin-left: 0.5em;
 }
