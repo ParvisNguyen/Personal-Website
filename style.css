@@ -5,7 +5,7 @@ Ubuntu*/
 
 /*Colour reference*/
 :root {
-    --base-colour:#ED254E;
+    --base-colour: #000;
     --text-colour-bright: #fff;
     --text-colour-dark: #333;
     --github-colour: #000000;
@@ -13,9 +13,10 @@ Ubuntu*/
     --intro-colour: #011936;
     --section-colour: #465362;
     --colour-3: #6e6eff;
-    --shadow-colour: rgba(0, 0, 0, 0.08);
+    --shadow-colour: rgba(0, 0, 0, 0.10);
     --card-colour: #F9DC5C;
-    --project-card: #F4FFFD;
+    --project-card: #ED254E;/* #F4FFFD; */
+    --contactme-colour: #F4FFFD;
 }
 
 /*Removing default spacing to prevent unexpected behaviour*/
@@ -187,6 +188,12 @@ section p {
     min-width: 200px; /* Minimum card width */
     text-align: center; /* Center text */
     color: var(--text-colour-dark); /*Text Colour*/
+    transition: transform 100ms ease, box-shadow 100ms ease; /* Smooth transition */
+}
+
+.skill-category:hover {
+    box-shadow: 0 4px 16px var(--shadow-colour); /* Hover shadow */
+    transform: translateY(-5px); /* Lift effect */
 }
 
 .skill-category h3 {
@@ -219,7 +226,13 @@ section p {
     box-shadow: 0 2px 8px var(--shadow-colour);
     border-radius: 0.5em;
     background-color: var(--project-card);
-    color:black
+    color:black;
+    transition: transform 100ms ease, box-shadow 100ms ease;
+}
+
+.project-category:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px var(--shadow-colour);
 }
 
 .project-header {
@@ -232,4 +245,31 @@ section p {
 .project-icons i {
     font-size: 1.5em;
     margin-left: 0.5em;
+}
+
+
+
+input[type=text]{
+    width:100%;
+    margin: .5em 0;
+    padding:1em;
+    border-radius: .5em;
+    border: none;
+    font-size: 1rem;
+}
+
+input[type=submit], button{
+    background-color: var(--base-colour);
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 1em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 100ms ease;
+}
+
+button:hover{
+    background-color: var(--text-colour-dark);
+    scale: 1.05;
 }
