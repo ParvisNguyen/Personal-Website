@@ -247,6 +247,12 @@ section p {
     margin-left: 0.5em;
 }
 
+.project-desc {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
 
 
 input[type=text]{
@@ -257,6 +263,9 @@ input[type=text]{
     border: none;
     font-size: 1rem;
     resize: vertical; /*Allows vertical resizing only*/
+    font-family: 'Roboto', sans-serif; /*Consistent font*/
+    margin-bottom: 2em;
+    background: var(--contactme-colour);
 }
 
 input[type=submit], button{
@@ -287,5 +296,7 @@ textarea {
     box-sizing: border-box; /* Ensures padding doesn't overflow */
     overflow-wrap: break-word; /* Ensures long words break */
     line-height: 1.5; /* Optional: for better readability */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+    background-color: var(--contactme-colour);
 }
 

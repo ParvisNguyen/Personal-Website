@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
             <img height = "403px" width = "302px" src="Images/Portrait.jpg">
             <div class="text-container">
                 <h1>Welcome to my website</h1>
-                <p>I'm Parvis. I'm a McMaster student in <strong>Software Engineering</strong> looking to make a difference. Feel free to browse around and learn more about my work!</p>
+                <p>I'm Parvis. I'm a McMaster student in <strong>Software Engineering</strong> looking to make a difference. Feel free to look around and learn more about my work!</p>
                 <a href="https://github.com/ParvisNguyen" class="cta-button">My Github</a>
                 <a href="https://www.linkedin.com/in/parvis-nguyen/" class="cta-button secondary">My Linkedin</a>
             </div>
@@ -63,7 +64,7 @@
             <h2>My Projects</h2>
             <div class="project-category">
                 <div class="project-header">
-                    <h3 style="text-align:center; margin-bottom: 1em;">Full-stack Social Media App</h3>
+                    <h3>Full-stack Social Media App</h3>
                     <div class="project-icons">
                         <i class="fa-brands fa-square-js"></i>
                         <i class="fa-brands fa-react" title="React"></i>
@@ -71,9 +72,39 @@
                         <i class="fa-solid fa-database" title="SQL"></i>
                     </div>
                 </div>
+                <div class="project-desc">
                 <p>I created a full stack application that serves as a social media platform. Utilizing React, Node.js, and SQL, users are able to create accounts and be administered a session token, create posts under their username, and write comments onto other posts. Insomnia was used to validate functionality between the back end and database along the way.</p>
+                </div>
                 <a href="https://github.com/ParvisNguyen/Full-Stack-Social-Media-Application"><i class="fa-brands fa-square-github" style="font-size: 2em;"></i></a>
             </div>
+
+            <div class="project-category">
+                <div class="project-header">
+                    <h3>MNIST Digit Classifier From Scratch</h3>
+                    <div class="project-icons">
+                        <i class="fa-brands fa-python"></i>
+                        <i class="fa-brands fa-kaggle"></i>
+                    </div>
+                </div>
+                <div class="project-desc">
+                <p>Machine learning MNIST Digit Classifier that doesn't use Tensorflow or Pytorch, just numpy and math. Imported MNIST Data set and trained using Kaggle</p>
+                </div>
+                <a href="https://github.com/ParvisNguyen/MNIST-Neural-Network-Training"><i class="fa-brands fa-square-github" style="font-size: 2em;"></i></a>
+            </div>
+
+            <div class="project-category">
+                <div class="project-header">
+                    <h3>Spotify API Integration</h3>
+                    <div class="project-icons">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                </div>
+                <div class="project-desc">
+                <p>A Python script that utilizes the Spotify API to create a playlist of the top 100 songs from the Billboard charts for a specified date. The script prompts the user for a date, retrieves the corresponding chart data, searches for each song on Spotify, and compiles them into a new playlist in the user's Spotify account.</p>
+                </div>
+                <a href="https://github.com/ParvisNguyen/Spotify-API-Testing"><i class="fa-brands fa-square-github" style="font-size: 2em;"></i></a>
+            </div>
+
             <div class="project-category">
                 <div class="project-header">
                     <h3>Personal Portfolio Website</h3>
@@ -82,9 +113,12 @@
                         <i class="fa-brands fa-css3-alt"></i>
                     </div>
                 </div>
+                <div class="project-desc">
                 <p>A personal portfolio website that is right here, to showcase my projects and skills.</p>
+                </div>
                 <a href="https://github.com/ParvisNguyen/Personal-Website"><i class="fa-brands fa-square-github" style="font-size: 2em;"></i></a>
             </div>
+            
         </div>
     </section>
     <section id="contact-me">
@@ -96,9 +130,9 @@
             <input type="text" placeholder="john.doe@example.com">
             <label for="Message">Your Message</label>
             <textarea
+            form autocomplete="off"
             id="Message"
-            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at metus tincidunt, iaculis neque et, pharetra ligula. Fusce ullamcorper diam in justo aliquam imperdiet. Nulla facilisi. Integer et dapibus sapien. Pellentesque suscipit nisi sem, sed rhoncus massa malesuada sed. Phasellus volutpat dictum eros ut lacinia. In hac habitasse platea dictumst. Duis sit amet ex neque. Mauris id urna pretium, consequat quam vel, ullamcorper diam. Praesent egestas consequat condimentum. Pellentesque interdum dolor eu lacus faucibus, vel maximus libero consectetur.">
-            </textarea>
+            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur libero urna, elementum in lectus nec, maximus consequat risus. Nulla varius enim in leo tempus vulputate. Nunc sagittis sem vehicula egestas semper. Sed eget tortor consequat, placerat ipsum in, commodo ante. Nullam hendrerit, enim vel posuere volutpat, risus nulla tincidunt neque, non blandit nunc libero sed massa. Vivamus et sagittis ex. Nam nec consectetur urna. Curabitur dignissim nulla ac nisi rutrum, sed sodales dolor tincidunt. Quisque a diam neque. Aliquam viverra accumsan gravida."></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
