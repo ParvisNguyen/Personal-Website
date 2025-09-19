@@ -7,6 +7,7 @@
     <title>Parvis Nguyen</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</script>
 </head>
 <body>
     <header>
@@ -100,7 +101,8 @@
                     </div>
                 </div>
                 <div class="project-desc">
-                <p>A Python script that utilizes the Spotify API to create a playlist of the top 100 songs from the Billboard charts for a specified date. The script prompts the user for a date, retrieves the corresponding chart data, searches for each song on Spotify, and compiles them into a new playlist in the user's Spotify account.</p>
+                <p>A Python script that utilizes the Spotify API retrieves the data of the queried artist and displays their top tracks.</p>
+                <!--A Python script that utilizes the Spotify API to create a playlist of the top 100 songs from the Billboard charts for a specified date. The script prompts the user for a date, retrieves the corresponding chart data, searches for each song on Spotify, and compiles them into a new playlist in the user's Spotify account.-->
                 </div>
                 <a href="https://github.com/ParvisNguyen/Spotify-API-Testing"><i class="fa-brands fa-square-github" style="font-size: 2em;"></i></a>
             </div>
@@ -123,18 +125,22 @@
     </section>
     <section id="contact-me">
         <h2>Contact Me</h2>
-        <form>
+        <form id="contact-form">
             <label for="Name">Your Name</label>
-            <input type="text" id="Name" placeholder="John Doe">
+            <input type="text" id="Name" name="user_name" placeholder="John Doe">
             <label for="Email">Your Email</label>
-            <input type="text" placeholder="john.doe@example.com">
+            <input type="text" id="Email" name="user_email" placeholder="john.doe@example.com">
             <label for="Message">Your Message</label>
             <textarea
-            form autocomplete="off"
+            autocomplete="off"
             id="Message"
-            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur libero urna, elementum in lectus nec, maximus consequat risus. Nulla varius enim in leo tempus vulputate. Nunc sagittis sem vehicula egestas semper. Sed eget tortor consequat, placerat ipsum in, commodo ante. Nullam hendrerit, enim vel posuere volutpat, risus nulla tincidunt neque, non blandit nunc libero sed massa. Vivamus et sagittis ex. Nam nec consectetur urna. Curabitur dignissim nulla ac nisi rutrum, sed sodales dolor tincidunt. Quisque a diam neque. Aliquam viverra accumsan gravida."></textarea>
+            name="user_message"
+            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur libero urna, elementum in lectus nec, maximus consequat risus. Nulla varius enim in leo tempus vulputate. Nunc sagittis sem vehicula egestas semper. Sed eget tortor consequat, placerat ipsum in, commodo ante. Nullam hendrerit, enim vel posuere volutpat, risus nulla tincidunt neque, non blandit nunc libero sed massa. Vivamus et sagittis ex. Nam nec consectetur urna. Curabitur dignissim nulla ac nisi rutrum, sed sodales dolor tincidunt. Quisque a diam neque. Aliquam viverra accumsan gravida."
+            required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
