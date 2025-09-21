@@ -139,11 +139,22 @@ h1{
     padding: .75em 1.25em;
     border-radius: .5em;
     font-weight:600;
+    transition: 100ms ease;
+}
+
+.cta-button:hover {
+    background-color: var(--text-colour-dark);
+    scale: 1.05;
 }
 
 .secondary {
     color: white;
     background-color: var(--linkedin-colour);
+}
+
+.secondary:hover {
+    background-color: #5a5aff;
+    scale: 1.05;
 }
 
 section {
